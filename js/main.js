@@ -1,7 +1,7 @@
 
 var saveContent = function(content){
-  var charCount = content.innerText.replace(/\n/g, '').length;
-  var wordCount = content.textContent.replace(/^\s+|\s+$/g, '').split(/\s+/).length;
+  var charCount = content.innerText.replace(/\s+/g, ' ').length - 1;
+  var wordCount = content.innerText.split(/\s+/).length - 1;
 
   localStorage.setItem("TextuousContent", content.innerHTML);
   localStorage.setItem("TextuousContentSavedAt", (new Date).toLocaleTimeString());
@@ -39,11 +39,11 @@ var resetContentSavedAt = function(container){
 };
 var resetContentCharCount = function(container){
   localStorage.removeItem("TextuousContentCharCount");
-  container.textContent = 434;
+  container.textContent = 437;
 };
 var resetContentWordCount = function(container){
   localStorage.removeItem("TextuousContentWordCount");
-  container.textContent = 76;
+  container.textContent = 79;
 };
 var resetTheme = function(container){
   localStorage.removeItem("TextuousTheme");
@@ -87,8 +87,7 @@ window.onload = function(){
   });
 
   downloadLink.addEventListener('click', function(e){
-    var text = textareaContent.textContent.replace(/  /g, '');
-    this.href = 'data:text/plain;charset=utf-8,' + encodeURIComponent(text);
+    this.href = 'data:text/plain;charset=utf-8,' + encodeURIComponent(textareaContent.innerText);
   });
 
   iconWand.addEventListener('click', function(){
