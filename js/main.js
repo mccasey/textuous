@@ -24,7 +24,7 @@ var displayContentWordCount = function(container){
 
 var resetContent = function(container){
   localStorage.removeItem("TextuousContent");
-  container.innerHTML = '<h1>Welcome To SimpleNote</h1>' +
+  container.innerHTML = '<h1>Welcome To Textuous</h1>' +
     '<p>Textuous is simple clean writing space, where you can get down what\'s ' +
     'important without all the fancy stuff getting in the way.</p>' +
     '<p>To get started just delete this text and replace it with what ever you ' +
