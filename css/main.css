@@ -46,7 +46,10 @@ b {
   background: var(--theme-dark-bg-color);
 }
 
-#theme-dark, #theme-dark body, #theme-dark #icon-download {
+#theme-dark,
+#theme-dark body,
+#theme-dark #icon-download,
+#theme-dark input[type="text"]#file-name {
   color: var(--theme-dark-font-color);
 }
 
@@ -113,6 +116,7 @@ input[type="text"]#file-name{
   box-shadow: none;
   line-height: 1;
   border: none;
+  color: var(--theme-light-font-color);
   background: transparent;
   font-size: 14px;
   margin-left: .5rem;
