@@ -1,0 +1,136 @@
+:root {
+  --min-width: 320px;
+  --header-height: 60px;
+  --footer-height: 52px;
+  --main-height: calc(100vh - 112px);;
+  --theme-light-font-color: #333333;
+  --theme-light-bg-color: #ffffff;
+  --theme-dark-font-color: #bdbdbd !important;
+  --theme-dark-bg-color: #212121 !important;
+  --theme-font-family: 'Open Sans', sans-serif;
+
+}
+
+html, body {
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+  min-width: var(--min-width);
+  background: var(--theme-light-bg-color);
+  color: var(--theme-light-font-color);
+  font-family: var(--theme-font-family);
+}
+*, *:before, *:after {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+}
+
+b {
+  font-weight: 700 !important;
+}
+
+.d-flex {
+  display: flex !important;
+}
+
+.mr-auto {
+  margin-right: auto !important;
+}
+
+/* ====================
+  DARK THEME
+======================= */
+#theme-dark, #theme-dark body {
+  background: var(--theme-dark-bg-color);
+}
+
+#theme-dark, #theme-dark body, #theme-dark #icon-download {
+  color: var(--theme-dark-font-color);
+}
+
+/* ====================
+  HEADER & FOOTER
+======================= */
+header ul,
+footer ul {
+  margin: 0;
+  padding: 1rem;
+  list-style: none;
+}
+header ul li,
+footer ul li {
+  margin: 0;
+  padding-left: 1rem;
+  padding-right: 0;
+}
+
+header ul li.mr-auto,
+footer ul li.mr-auto {
+  margin: 0;
+  padding-left: 0;
+  padding-right: 1rem;
+}
+
+footer,
+header {
+  opacity: .5;
+  transition: opacity .25s;
+}
+footer:hover,
+header:hover {
+  opacity: 1;
+}
+
+header {
+  width: 100%;
+  height: var(--header-height);
+}
+
+footer {
+  font-size: 12px;
+  height: var(--footer-height);
+}
+footer ul {
+  justify-content: flex-end;
+}
+#character-count:before {
+  content: "Character Count: ";
+}
+#word-count:before {
+  content: "Word Count: ";
+}
+#saved-at:before {
+  content: "Saved: "
+}
+
+#icon-download {
+  color: var(--theme-light-font-color);
+}
+input[type="text"]#file-name{
+  outline: none;
+  box-shadow: none;
+  line-height: 1;
+  border: none;
+  background: transparent;
+  font-size: 14px;
+  margin-left: .5rem;
+  vertical-align: text-top;
+}
+
+/* ====================
+  MAIN CONTENT
+======================= */
+main {
+  height: var(--main-height);
+  padding: 1rem;
+}
+main article {
+  width: 100%;
+  height: auto;
+  outline: none;
+  margin: 0 auto;
+  box-shadow: none;
+  max-width: 768px;
+}

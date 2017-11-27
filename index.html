@@ -6,11 +6,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Textuous: A simple clean notepad">
     <link rel="icon" href="images/favicon.png" sizes="16x16" type="image/png">
-
     <title>Textuous</title>
+
+    <link rel="stylesheet" href="css/icons.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
   </head>
 
   <body>
-    <h1>Hello, World!</h1>
+    <header>
+      <ul class="d-flex">
+        <li class="mr-auto">
+          <a href="#" id="download-link" download="untitled.txt"><span id="icon-download" class="icon"></span></a>
+          <input id="file-name" type="text" value="Untitled" placeholder="Untitled Document" />
+        </li>
+
+        <li>
+          <a id="icon-wand" class="icon"></a>
+        </li>
+
+        <li>
+          <a id="icon-garbage" class="icon"></a>
+        </li>
+      </ul>
+    </header>
+
+    <main>
+      <article id="textarea" contenteditable="true">
+        <h1>Welcome To Textuous</h1>
+        <p>
+          Textuous is simple clean writing space, where you can get down what's important without all the fancy stuff getting in the way.
+        </p>
+        <p>
+          To get started just delete this text and replace it with what ever you want. What you type here will live in your browser until you decide to delete it. You can come back anytime to continue writing.
+        </p>
+        <p>
+          You also have the option of downloading your text as a .txt file after you're finished!
+        </p>
+      </article>
+    </main>
+
+    <footer>
+      <ul class="d-flex">
+        <li>
+          <a id="word-count">5</a>
+        </li>
+
+        <li>
+          <a id="character-count">37</a>
+        </li>
+
+        <li>
+          <a id="saved-at">0:00</a>
+        </li>
+      </ul>
+    </footer>
+
+    <script src="./js/main.js"></script>
   </body>
 </html>
