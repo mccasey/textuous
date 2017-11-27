@@ -30,7 +30,7 @@ var resetContent = function(container){
     '<p>To get started just delete this text and replace it with what ever you ' +
     'want. What you type here will live in your browser until you decide to ' +
     'delete it. You can come back anytime to continue writing.</p>' +
-    '<p>You also have the option of downloading your text as a .txt file after ' +
+    '<p>You also have the option of downloading your text as a \'.txt\' file after ' +
     'you\'re finished!</p>';
 };
 var resetContentSavedAt = function(container){
