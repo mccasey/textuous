@@ -60,12 +60,6 @@ var setTheme = function(){
   };
 };
 
-var downloadContent = function(link){
-  // function saveFileName(){
-  // localStorage.setItem("filename", filename.value);
-  // link.attributes.download.value = filename.value;
-}
-
 window.onload = function(){
   var textareaContent = document.getElementById('textarea');
   var savedAt = document.getElementById('saved-at')
@@ -73,7 +67,6 @@ window.onload = function(){
   var wordCount = document.getElementById('word-count');
   var iconGarbage = document.getElementById('icon-garbage');
   var iconWand = document.getElementById('icon-wand');
-  // var iconInfo = document.getElementById('icon-info');
   var downloadLink = document.getElementById('download-link');
   var fileNameInput= document.getElementById('file-name');
 
@@ -93,9 +86,6 @@ window.onload = function(){
     downloadLink.setAttribute('download', name);
   });
 
-  // iconInfo.addEventListener('click', function(){
-  //   this.getElementsByTagName('p')[0];
-  // });
 
   iconWand.addEventListener('click', function(){
     setTheme();
