@@ -86,6 +86,10 @@ window.onload = function(){
     downloadLink.setAttribute('download', name);
   });
 
+  downloadLink.addEventListener('click', function(e){
+    var text = textareaContent.textContent.replace(/  /g, '');
+    this.href = 'data:text/plain;charset=utf-8,' + encodeURIComponent(text);
+  });
 
   iconWand.addEventListener('click', function(){
     setTheme();
