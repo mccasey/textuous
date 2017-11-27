@@ -39,11 +39,11 @@ var resetContentSavedAt = function(container){
 };
 var resetContentCharCount = function(container){
   localStorage.removeItem("TextuousContentCharCount");
-  container.textContent = 37;
+  container.textContent = 434;
 };
 var resetContentWordCount = function(container){
   localStorage.removeItem("TextuousContentWordCount");
-  container.textContent = 5;
+  container.textContent = 76;
 };
 var resetTheme = function(container){
   localStorage.removeItem("TextuousTheme");
